@@ -1,0 +1,6 @@
+/target
+/config
+Cargo.lock
+perf.data*
+flamegraph.svg
+sync.sh

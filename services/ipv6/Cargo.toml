@@ -1,0 +1,25 @@
+[package]
+name = "routeweaver-service-ipv6"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+routeweaver-common = { workspace = true }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+futures-util = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+serde = { workspace = true }
+serde_with = { workspace = true }
+toml = { workspace = true }
+blake2 = { workspace = true }
+arrayvec = { workspace = true }
+data-encoding = { workspace = true }
+bincode = { workspace = true }
+clap = { workspace = true }
+rand = { workspace = true }
+scc = { workspace = true }
+dirs = "5.0"
+tun-rs = { version = "1.5", features = ["async"] }
+ipnet = "2.10"

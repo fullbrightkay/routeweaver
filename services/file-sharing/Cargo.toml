@@ -1,0 +1,41 @@
+[package]
+name = "routeweaver-service-file-sharing"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+
+[dependencies]
+routeweaver-common = { workspace = true }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+futures-util = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+serde = { workspace = true }
+serde_with = { workspace = true }
+toml = { workspace = true }
+blake2 = { workspace = true }
+arrayvec = { workspace = true }
+data-encoding = { workspace = true }
+bincode = { workspace = true }
+clap = { workspace = true }
+rand = { workspace = true }
+dirs = { workspace = true }
+rangemap = { workspace = true }
+thiserror = { workspace = true }
+async-walkdir = "2.0"
+byte-unit = "5.1"
+moka = { version = "0.12", features = ["future", "logging"] }
+num_cpus = "1.16"
+chrono = { version = "0.4", features = ["serde"] }
+nix = { version = "0.29", default-features = false, features = [
+    "fs",
+    "mount",
+    "user"
+], optional = true }
+# Provides utf8 paths, important for working with the manifest
+camino = { version = "1.1", features = ["serde1"] }
+
+[features]
+default = ["fuse"]
+fuse = ["dep:nix"]

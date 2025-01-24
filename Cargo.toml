@@ -1,0 +1,37 @@
+[workspace]
+members = ["common", "daemon", "services/*"]
+resolver = "2"
+
+[workspace.dependencies]
+routeweaver-common = { path = "common" }
+serde = { version = "1.0", features = ["derive"] }
+serde_with = "3.11"
+tokio = { version = "1.43", features = [
+    "sync",
+    "macros",
+    "io-util",
+    "rt",
+    "rt-multi-thread",
+    "time",
+    "net",
+    "fs",
+    "signal",
+] }
+tokio-util = { version = "0.7", features = ["codec", "io-util", "net"] }
+futures-util = { version = "0.3", features = ["sink"] }
+toml = "0.8"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+bincode = { version = "2.0.0-rc.3", features = ["serde"] }
+clap = { version = "4.5", features = ["derive"] }
+url = "2.5"
+thiserror = "2.0"
+arrayvec = { version = "0.7", features = ["serde", "zeroize"] }
+blake2 = "0.10"
+data-encoding = "2.6"
+zeroize = { version = "1.8", features = ["derive", "serde", "std"] }
+rand = "0.8"
+dirs = "6.0"
+scc = "2.3"
+rangemap = { version = "1.5", features = ["serde1"] }
+

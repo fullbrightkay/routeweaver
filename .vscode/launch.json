@@ -1,0 +1,140 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'routeweaver_common'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=routeweaver-common"
+                ],
+                "filter": {
+                    "name": "routeweaver_common",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'routeweaver-daemon'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=routeweaver-daemon",
+                    "--package=routeweaver-daemon"
+                ],
+                "filter": {
+                    "name": "routeweaver-daemon",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'routeweaver-daemon'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=routeweaver-daemon",
+                    "--package=routeweaver-daemon",
+                    "--",
+                    "--test-threads=1"
+                ],
+                "filter": {
+                    "name": "routeweaver-daemon",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'routeweaver-service-compute'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=routeweaver-service-compute",
+                    "--package=routeweaver-service-compute"
+                ],
+                "filter": {
+                    "name": "routeweaver-service-compute",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'routeweaver-service-compute'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=routeweaver-service-compute",
+                    "--package=routeweaver-service-compute"
+                ],
+                "filter": {
+                    "name": "routeweaver-service-compute",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'routeweaver-service-file-sharing'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=routeweaver-service-file-sharing",
+                    "--package=routeweaver-service-file-sharing"
+                ],
+                "filter": {
+                    "name": "routeweaver-service-file-sharing",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'routeweaver-service-file-sharing'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=routeweaver-service-file-sharing",
+                    "--package=routeweaver-service-file-sharing"
+                ],
+                "filter": {
+                    "name": "routeweaver-service-file-sharing",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
